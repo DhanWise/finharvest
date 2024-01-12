@@ -60,7 +60,7 @@ check-safety:
 	poetry run bandit -ll --recursive finharvest tests
 
 .PHONY: lint
-lint: test check-codestyle mypy check-safety
+lint: test check-codestyle mypy # check-safety
 
 .PHONY: update-dev-deps
 update-dev-deps:

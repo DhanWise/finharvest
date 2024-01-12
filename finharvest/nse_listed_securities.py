@@ -26,7 +26,7 @@ def _clean_up_downloaded_data(content: str) -> List[List[str]]:
     return all_rows
 
 
-def _download_all_listed_securities():
+def _download_all_listed_securities() -> pd.DataFrame:
     """Download all listed equities from NSE website and returns a pandas dataframe"""
 
     global REQUETS_HEADERS
@@ -40,7 +40,7 @@ def _download_all_listed_securities():
     return cleaned_data_frame
 
 
-def get_all_listed_securities():
+def get_all_listed_securities() -> pd.DataFrame:
     """
     Get all listed equities from NSE website as pandas dataframe.
     The dataframe contains the following columns:
